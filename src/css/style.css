@@ -1,0 +1,141 @@
+@font-face {
+  font-family: poppins;
+  font-display: swap;
+  src: url("../font/Poppins-Regular.ttf");
+}
+
+:root{
+  --background-color-primary: #ddd;
+  --background-color-secondary: #F2F3F4;
+  --text-color-primary: black;
+}
+
+body{
+  font-family: poppins;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--background-color-primary);
+  overflow: hidden;
+  color: var(--text-color-primary);
+}
+
+#tabs {
+  position: relative;
+  width: fit-content;
+  display: flex;
+  gap: 20px;
+  background-color: rgb(229, 229, 229);
+  height: 40px;
+  width: 50%;
+  align-items: center;
+  padding-left: 20px;
+  user-select: none;
+}
+
+#tabs > div{
+  cursor: pointer;
+}
+
+#tabs > div#current{
+  font-weight: 900;
+}
+
+#card{
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%, -25%);
+  height: 50%;
+  width: 50%;
+}
+
+#content{
+  background-color: var(--background-color-secondary);
+  box-sizing: border-box;
+  padding: 20px 40px;
+}
+
+#name{
+  margin: 0px;
+  animation-name: huer;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  background: -webkit-linear-gradient(0deg, rgb(0, 255, 110), #525FC8);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #525FC8;
+  padding: 10px 0;
+  font-size: 54px;
+}
+
+@keyframes huer{
+  from{
+    filter: hue-rotate(0deg);
+  } to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+#pills {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px;
+  color: black;
+  font-size: 16px;
+  gap: 10px;
+}
+
+#pills > div {
+  border: 1px solid black;
+  padding: 2px 10px;
+  border-radius: 30px;
+  background-color: transparent;
+  border-color: #606c94;
+  color: #606c94;
+  user-select: none;
+  transition: .75s;
+  display: flex;
+  gap: 5px;
+}
+
+#pills > div > #img{
+  width: 20px;
+  height: 20px;
+  align-self: center;
+  justify-self: center;
+}
+
+#separator{
+  border: 1px solid #aaa;
+  margin-bottom: 20px;
+}
+
+#pills > div:hover{
+  background-color: #606c94;
+  color: white;
+}
+
+#pills > div[id]{
+  cursor: pointer;
+}
+
+ul > li{
+  list-style-type: circle;
+  margin: 10px 0;
+}
+
+#grid-display-second{
+  display: grid;
+  grid-template-columns: 50% auto;
+}
+
+#image-container{
+  justify-self: center;
+  align-self: center;
+}
+
+img{
+  user-select: none;
+  -webkit-user-drag: none;
+}
