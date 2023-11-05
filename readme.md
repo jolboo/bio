@@ -1,3 +1,3 @@
 # Jolbo
 
-This is my About me page. 
+Wsp yall, this is my abt me page
