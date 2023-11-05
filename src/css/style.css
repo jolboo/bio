@@ -4,19 +4,41 @@
   src: url("../font/Poppins-Regular.ttf");
 }
 
-:root{
+:root {
   --background-color-primary: #ddd;
-  --background-color-secondary: #F2F3F4;
+  --background-color-secondary: #d6d6d6;
   --text-color-primary: black;
 }
 
-body{
+body {
   font-family: poppins;
   width: 100vw;
   height: 100vh;
   background-color: var(--background-color-primary);
-  overflow: hidden;
+  background-image: url(../assets/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow-x: hidden;
+  overflow-y: auto;
   color: var(--text-color-primary);
+}
+
+body::-webkit-scrollbar{
+  background-color: black;
+}
+
+#tabs-joiner{
+  display: flex;
+}
+
+#triangle{
+  width: 0px;
+  width: 0;
+	height: 0;
+	border-left: 0px solid transparent;
+	border-right: 40px solid transparent;
+	border-bottom: 40px solid rgb(229, 229, 229);
 }
 
 #tabs {
@@ -32,49 +54,54 @@ body{
   user-select: none;
 }
 
-#tabs > div{
+#tabs > div {
   cursor: pointer;
 }
 
-#tabs > div#current{
+#tabs > div#current {
   font-weight: 900;
 }
 
-#card{
+#card {
   position: absolute;
   left: 50%;
-  top: 20%;
-  transform: translate(-50%, -25%);
-  height: 50%;
+  top: 10%;
+  transform: translate(-50%);
   width: 50%;
+  padding-bottom: 20vh;
 }
 
-#content{
+#content {
   background-color: var(--background-color-secondary);
   box-sizing: border-box;
   padding: 20px 40px;
 }
 
-#name{
+#name {
   margin: 0px;
   animation-name: huer;
   animation-duration: 5s;
   animation-iteration-count: infinite;
-  background: -webkit-linear-gradient(0deg, rgb(0, 255, 110), #525FC8);
+  background: -webkit-linear-gradient(0deg, rgb(0, 255, 110), #525fc8);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: #525FC8;
+  color: #525fc8;
   padding: 10px 0;
   font-size: 54px;
 }
 
-@keyframes huer{
-  from{
+@keyframes huer {
+  from {
     filter: hue-rotate(0deg);
-  } to {
+  }
+  to {
     filter: hue-rotate(360deg);
   }
+}
+
+#pills-separator {
+  margin: 30px 0;
 }
 
 #pills {
@@ -84,6 +111,7 @@ body{
   color: black;
   font-size: 16px;
   gap: 10px;
+  justify-content: center;
 }
 
 #pills > div {
@@ -94,48 +122,88 @@ body{
   border-color: #606c94;
   color: #606c94;
   user-select: none;
-  transition: .75s;
+  transition: 0.75s;
   display: flex;
   gap: 5px;
 }
 
-#pills > div > #img{
+#pills > div > #img {
   width: 20px;
   height: 20px;
   align-self: center;
   justify-self: center;
 }
 
-#separator{
+#separator {
   border: 1px solid #aaa;
   margin-bottom: 20px;
 }
 
-#pills > div:hover{
+#pills > div:hover {
   background-color: #606c94;
   color: white;
 }
 
-#pills > div[id]{
+#pills > div[id] {
   cursor: pointer;
 }
 
-ul > li{
+h2{
+  margin: 0px;
+  padding: 5px 0;
+}
+
+.byi-dni{
+  text-transform: uppercase;
+  margin: 0px;
+  list-style: none;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+#dni{
+  display: flex;
+  align-self: flex-end;
+}
+
+#about-grid-byi{
+  display: grid;
+  grid-template-columns: 50% auto;
+  align-items: center;
+  justify-items: center;
+}
+
+#about-grid-dni{
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-items: center;
+}
+
+
+ul > li {
   list-style-type: circle;
   margin: 10px 0;
 }
 
-#grid-display-second{
-  display: grid;
-  grid-template-columns: 50% auto;
-}
-
-#image-container{
-  justify-self: center;
-  align-self: center;
-}
-
-img{
+img {
   user-select: none;
   -webkit-user-drag: none;
+}
+
+#likes-grid{
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+a, a:visited{
+  color: dodgerblue;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition-property: text-decoration-color;
+  transition-duration: 0.75s;
+  cursor: pointer;
+}
+
+a:hover{
+  text-decoration-color: dodgerblue;
 }
