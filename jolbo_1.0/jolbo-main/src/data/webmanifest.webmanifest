@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+  "name": "Jolbo",
+  "short_name": "Jolbo",
+  "description": "Nice pp",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "display_override": ["fullscreen", "standalone", "browser", "minimal-ui"],
+  "theme_color": "#525FC8",
+  "orientation": "landscape",
+  "start_url": "../index.html",
+  "icons": [
+    {
+      "src": "../icons/flower.png",
+      "sizes": "1448x1448",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
